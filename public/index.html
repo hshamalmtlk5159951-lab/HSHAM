@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c10">
+  <meta name="description" content="XENAI — مساعدك الذكي الخاص">
+  <title>XENAI — مساعدك الذكي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="XENAI الصفحة الرئيسية"><span class="brand-mark">X</span><span>XEN<span class="brand-accent">AI</span></span></a>
+      <button class="new-chat" id="newChat"><span>＋</span> محادثة جديدة</button>
+      <div class="side-label">محادثاتك <button id="clearChats" class="text-button">حذف الكل</button></div>
+      <div class="conversation-list" id="conversationList"></div>
+      <div class="sidebar-bottom"><span class="status-dot"></span><span id="engineStatus">جارٍ فحص المحرك...</span><span class="version">V 1.0</span></div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuButton" aria-label="فتح القائمة">☰</button>
+        <div class="top-title"><span class="online-dot"></span> XENAI <span class="top-subtitle">مساعدك الذكي</span></div>
+        <button class="icon-button" id="themeButton" aria-label="تبديل المظهر" title="تبديل المظهر">☼</button>
+      </header>
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="welcome-orb"><span>X</span><i></i></div>
+          <p class="eyebrow">ذكاء اصطناعي، على طريقتك</p>
+          <h1>أهلًا بك في <span>XENAI</span></h1>
+          <p class="welcome-copy">مساحتك الخاصة للتفكير، الإبداع، واكتشاف أفكار جديدة.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="اكتب لي خطة بسيطة لتعلم مهارة جديدة"><span>✦</span> ساعدني أتعلم شيئًا جديدًا</button>
+            <button class="suggestion" data-prompt="اقترح لي أفكارًا إبداعية لمشروع صغير"><span>◈</span> اقترح أفكارًا لمشروعي</button>
+            <button class="suggestion" data-prompt="لخص لي أهمية تنظيم الوقت بطريقة عملية"><span>⌁</span> اشرح لي موضوعًا ببساطة</button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+      <div class="composer-wrap">
+        <div class="attachment-preview" id="attachmentPreview" hidden><img id="previewImage" alt="معاينة الصورة"><span id="fileName"></span><button id="removeImage" aria-label="إزالة الصورة">×</button></div>
+        <form class="composer" id="chatForm">
+          <input type="file" id="imageInput" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+          <button type="button" class="compose-tool" id="imageButton" title="إرفاق صورة" aria-label="إرفاق صورة">▧</button>
+          <button type="button" class="compose-tool sticker-button" id="stickerButton" title="ملصق" aria-label="اختيار ملصق">☺</button>
+          <textarea id="messageInput" rows="1" placeholder="اكتب رسالتك إلى XENAI..." aria-label="رسالتك"></textarea>
+          <button type="button" class="compose-tool mic-button" id="micButton" title="التحدث" aria-label="التحدث صوتيًا">♩</button>
+          <button type="submit" class="send-button" id="sendButton" aria-label="إرسال">↑</button>
+          <div class="sticker-popover" id="stickerPopover" hidden><button type="button">✨</button><button type="button">🌟</button><button type="button">💡</button><button type="button">🚀</button><button type="button">❤️</button><button type="button">😊</button><button type="button">🎉</button><button type="button">🤖</button></div>
+        </form>
+        <p class="disclaimer">قد يخطئ XENAI أحيانًا. تحقّق من المعلومات المهمة.</p>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"title":"تعريف XENAI","content":"XENAI مساعد ذكاء اصطناعي قابل للتخصيص. أضف معلومات مشروعك إلى data/training.jsonl ثم شغّل npm run train لبناء قاعدة المعرفة المحلية."}
