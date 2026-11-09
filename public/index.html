@@ -6,57 +6,46 @@
   <meta name="theme-color" content="#0b0c10">
   <meta name="description" content="XENAI — مساعدك الذكي الخاص">
   <title>XENAI — مساعدك الذكي</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <style>
+    :root{color-scheme:dark;--bg:#0b0c10;--panel:#111217;--panel2:#191a21;--border:#292a33;--text:#f2f1f5;--muted:#9998a5;--accent:#b8a0ff;--bubble:#191a21;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);height:100dvh}.app{height:100%;display:flex}.sidebar{width:270px;flex-shrink:0;background:var(--panel);border-left:1px solid var(--border);padding:22px 15px;display:flex;flex-direction:column}.brand{font:700 23px system-ui;direction:ltr;text-align:right;padding:0 6px 25px;letter-spacing:1px}.brand b{color:var(--accent)}button,textarea{font:inherit;color:inherit}.new-chat{padding:12px;border:1px solid #554777;background:#211c2c;border-radius:12px;cursor:pointer;text-align:right}.section-label{color:var(--muted);font-size:12px;margin:25px 3px 8px;display:flex;justify-content:space-between}.section-label button{border:0;background:none;color:var(--accent);font-size:11px;cursor:pointer}.history{overflow:auto}.history-item{display:flex;align-items:center;margin:3px 0;border-radius:9px}.history-item.active,.history-item:hover{background:var(--panel2)}.history-item button:first-child{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right;background:none;border:0;padding:11px 9px;cursor:pointer}.history-item .del{background:none;border:0;color:var(--muted);cursor:pointer;padding:7px}.status{margin-top:auto;border-top:1px solid var(--border);padding-top:15px;color:var(--muted);font-size:12px}.main{min-width:0;flex:1;display:flex;flex-direction:column;background:radial-gradient(ellipse at 50% 30%,#171420,var(--bg) 65%)}header{height:64px;border-bottom:1px solid #ffffff0b;display:flex;align-items:center;justify-content:space-between;padding:0 24px}header strong{direction:ltr;font-size:13px;letter-spacing:1px}header button,.tool{width:38px;height:38px;border:1px solid var(--border);background:transparent;border-radius:11px;cursor:pointer}.chat{flex:1;overflow:auto;padding:30px 18px}.welcome{max-width:650px;text-align:center;margin:8vh auto 0}.orb{display:grid;place-items:center;margin:auto auto 22px;width:78px;height:78px;border:1px solid #69548d;border-radius:26px;background:linear-gradient(145deg,#292139,#121116);box-shadow:0 0 55px #9874fa26;font-size:38px;color:#d4c6ff}.welcome h1{font-size:29px;margin:8px}.welcome h1 span{direction:ltr;display:inline-block;color:var(--accent)}.welcome p{color:var(--muted);font-size:14px}.suggestions{display:flex;gap:9px;margin-top:24px}.suggestions button{flex:1;min-height:60px;background:#ffffff05;border:1px solid var(--border);border-radius:11px;cursor:pointer;font-size:12px}.suggestions button:hover{border-color:#806bac}.messages{max-width:800px;margin:auto;display:flex;flex-direction:column;gap:22px}.message{display:flex;gap:12px;align-items:flex-start}.avatar{flex-shrink:0;width:31px;height:31px;border-radius:10px;display:grid;place-items:center;background:#292a31;font-size:11px}.avatar.ai{background:#6650a3;font-weight:bold}.body{min-width:0;flex:1}.who{color:var(--muted);font-size:11px;margin:2px 0 6px}.content{line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}.user .content{display:inline-block;background:var(--bubble);border:1px solid var(--border);padding:9px 13px;border-radius:13px 3px 13px 13px}.sent-image{display:block;max-width:min(360px,100%);max-height:300px;object-fit:contain;border-radius:12px;margin-top:9px}.speak{border:0;background:none;color:var(--accent);font-size:11px;cursor:pointer;padding:8px 0}.composer-wrap{width:min(800px,calc(100% - 32px));margin:auto;padding:8px 0 12px}.preview{display:flex;align-items:center;gap:8px;margin-bottom:8px;color:var(--muted);font-size:12px}.preview img{width:40px;height:40px;object-fit:cover;border-radius:7px}.preview button{background:none;border:0;cursor:pointer}.composer{position:relative;display:flex;align-items:flex-end;gap:5px;padding:8px;background:#141419;border:1px solid #393540;border-radius:16px}.composer:focus-within{border-color:#756293}.composer textarea{flex:1;min-height:36px;max-height:130px;resize:none;background:none;border:0;outline:0;padding:8px;font-size:13px}.composer textarea::placeholder{color:#777580}.tool{border:0;color:var(--muted);font-size:18px}.send{background:linear-gradient(145deg,#b9a2ff,#8065d6);border:0;border-radius:11px;width:38px;height:38px;font-size:21px;cursor:pointer}.hint{text-align:center;color:#777580;font-size:10px;margin:8px}.stickers{position:absolute;bottom:55px;right:45px;padding:8px;background:#22212a;border:1px solid var(--border);border-radius:12px;display:grid;grid-template-columns:repeat(4,38px)}.stickers[hidden],.preview[hidden],.welcome[hidden]{display:none}.stickers button{background:none;border:0;font-size:21px;cursor:pointer;padding:6px}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#382831;border:1px solid #684b59;border-radius:10px;padding:11px 16px;max-width:90vw;display:none;font-size:12px}.toast.show{display:block}.light{color-scheme:light;--bg:#f4f2f8;--panel:#fff;--panel2:#f0edf5;--border:#e5e0eb;--text:#25222c;--muted:#777382;--bubble:#f1eef5;background:var(--bg)}.light .main{background:radial-gradient(ellipse at 50% 30%,#eee8f8,var(--bg) 65%)}.light .composer{background:#fff}@media(max-width:700px){.sidebar{position:fixed;inset:0 auto 0 0;z-index:3;transform:translateX(-105%);transition:.2s;box-shadow:8px 0 35px #0007}.sidebar.open{transform:translateX(0)}header{padding:0 12px}.suggestions{flex-direction:column}.suggestions button{min-height:45px;text-align:right;padding:10px}.chat{padding:22px 12px}.welcome{margin-top:5vh}.welcome h1{font-size:24px}.composer-wrap{width:calc(100% - 18px)}.tool{width:32px}.mic{display:none}}
+  </style>
 </head>
 <body>
-  <div class="app-shell">
+  <div class="app">
     <aside class="sidebar" id="sidebar">
-      <a class="brand" href="#" aria-label="XENAI الصفحة الرئيسية"><span class="brand-mark">X</span><span>XEN<span class="brand-accent">AI</span></span></a>
-      <button class="new-chat" id="newChat"><span>＋</span> محادثة جديدة</button>
-      <div class="side-label">محادثاتك <button id="clearChats" class="text-button">حذف الكل</button></div>
-      <div class="conversation-list" id="conversationList"></div>
-      <div class="sidebar-bottom"><span class="status-dot"></span><span id="engineStatus">جارٍ فحص المحرك...</span><span class="version">V 1.0</span></div>
+      <div class="brand">XEN<b>AI</b></div>
+      <button class="new-chat" id="newChat">＋ محادثة جديدة</button>
+      <div class="section-label">محادثاتك <button id="clear">حذف الكل</button></div>
+      <div class="history" id="history"></div>
+      <div class="status" id="status">جارٍ فحص المحرك...</div>
     </aside>
-
-    <main class="main-panel">
-      <header class="topbar">
-        <button class="icon-button menu-button" id="menuButton" aria-label="فتح القائمة">☰</button>
-        <div class="top-title"><span class="online-dot"></span> XENAI <span class="top-subtitle">مساعدك الذكي</span></div>
-        <button class="icon-button" id="themeButton" aria-label="تبديل المظهر" title="تبديل المظهر">☼</button>
-      </header>
-      <section class="chat-area" id="chatArea">
-        <div class="welcome" id="welcome">
-          <div class="welcome-orb"><span>X</span><i></i></div>
-          <p class="eyebrow">ذكاء اصطناعي، على طريقتك</p>
-          <h1>أهلًا بك في <span>XENAI</span></h1>
-          <p class="welcome-copy">مساحتك الخاصة للتفكير، الإبداع، واكتشاف أفكار جديدة.</p>
-          <div class="suggestions">
-            <button class="suggestion" data-prompt="اكتب لي خطة بسيطة لتعلم مهارة جديدة"><span>✦</span> ساعدني أتعلم شيئًا جديدًا</button>
-            <button class="suggestion" data-prompt="اقترح لي أفكارًا إبداعية لمشروع صغير"><span>◈</span> اقترح أفكارًا لمشروعي</button>
-            <button class="suggestion" data-prompt="لخص لي أهمية تنظيم الوقت بطريقة عملية"><span>⌁</span> اشرح لي موضوعًا ببساطة</button>
-          </div>
-        </div>
+    <main class="main">
+      <header><button id="menu" aria-label="القائمة">☰</button><strong>✦ XENAI</strong><button id="theme" aria-label="تبديل المظهر">☼</button></header>
+      <section class="chat" id="chat">
+        <div class="welcome" id="welcome"><div class="orb">X</div><h1>أهلًا بك في <span>XENAI</span></h1><p>مساحتك الخاصة للتفكير والإبداع واكتشاف أفكار جديدة.</p><div class="suggestions"><button data-prompt="اكتب لي خطة بسيطة لتعلم مهارة جديدة">✦ ساعدني أتعلم شيئًا جديدًا</button><button data-prompt="اقترح أفكارًا إبداعية لمشروع صغير">◈ اقترح أفكارًا لمشروعي</button><button data-prompt="اشرح لي موضوعًا صعبًا بطريقة بسيطة">⌁ اشرح لي موضوعًا ببساطة</button></div></div>
         <div class="messages" id="messages" aria-live="polite"></div>
       </section>
-      <div class="composer-wrap">
-        <div class="attachment-preview" id="attachmentPreview" hidden><img id="previewImage" alt="معاينة الصورة"><span id="fileName"></span><button id="removeImage" aria-label="إزالة الصورة">×</button></div>
-        <form class="composer" id="chatForm">
-          <input type="file" id="imageInput" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
-          <button type="button" class="compose-tool" id="imageButton" title="إرفاق صورة" aria-label="إرفاق صورة">▧</button>
-          <button type="button" class="compose-tool sticker-button" id="stickerButton" title="ملصق" aria-label="اختيار ملصق">☺</button>
-          <textarea id="messageInput" rows="1" placeholder="اكتب رسالتك إلى XENAI..." aria-label="رسالتك"></textarea>
-          <button type="button" class="compose-tool mic-button" id="micButton" title="التحدث" aria-label="التحدث صوتيًا">♩</button>
-          <button type="submit" class="send-button" id="sendButton" aria-label="إرسال">↑</button>
-          <div class="sticker-popover" id="stickerPopover" hidden><button type="button">✨</button><button type="button">🌟</button><button type="button">💡</button><button type="button">🚀</button><button type="button">❤️</button><button type="button">😊</button><button type="button">🎉</button><button type="button">🤖</button></div>
-        </form>
-        <p class="disclaimer">قد يخطئ XENAI أحيانًا. تحقّق من المعلومات المهمة.</p>
+      <div class="composer-wrap"><div class="preview" id="preview" hidden><img id="previewImg" alt="معاينة الصورة"><span id="fileName"></span><button id="removeImage" aria-label="إزالة الصورة">×</button></div>
+        <form class="composer" id="form"><input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden><button class="tool" id="imageButton" type="button" title="إرفاق صورة">▧</button><button class="tool" id="stickerButton" type="button" title="ملصقات">☺</button><textarea id="input" rows="1" placeholder="اكتب رسالتك إلى XENAI..."></textarea><button class="tool mic" id="mic" type="button" title="إملاء صوتي">♩</button><button class="send" type="submit" aria-label="إرسال">↑</button><div class="stickers" id="stickers" hidden><button type="button">✨</button><button type="button">🌟</button><button type="button">💡</button><button type="button">🚀</button><button type="button">❤️</button><button type="button">😊</button><button type="button">🎉</button><button type="button">🤖</button></div></form><p class="hint">قد يخطئ XENAI أحيانًا. تحقّق من المعلومات المهمة.</p>
       </div>
     </main>
   </div>
   <div class="toast" id="toast" role="status"></div>
-  <script src="/app.js" defer></script>
+  <script>
+    (()=>{
+      const $=s=>document.querySelector(s), KEY='xenai-conversations-v1';let chats=[];try{chats=JSON.parse(localStorage.getItem(KEY)||'[]')}catch{}let active=chats[0]?.id||null,image=null,busy=false;
+      const current=()=>chats.find(c=>c.id===active);const save=()=>localStorage.setItem(KEY,JSON.stringify(chats));
+      function toast(text){const el=$('#toast');el.textContent=text;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),3500)}
+      function render(){const list=$('#history');list.replaceChildren();chats.forEach(c=>{const row=document.createElement('div');row.className='history-item'+(c.id===active?' active':'');const sel=document.createElement('button');sel.textContent=c.title;sel.onclick=()=>{active=c.id;render();$('#sidebar').classList.remove('open')};const del=document.createElement('button');del.className='del';del.textContent='×';del.title='حذف المحادثة';del.onclick=()=>{chats=chats.filter(x=>x.id!==c.id);if(active===c.id)active=chats[0]?.id||null;save();render()};row.append(sel,del);list.append(row)});
+        const box=$('#messages');box.replaceChildren();const c=current();$('#welcome').hidden=!!c?.messages.length;if(c)c.messages.forEach(m=>{const row=document.createElement('article');row.className='message '+(m.role==='user'?'user':'assistant');const av=document.createElement('div');av.className='avatar'+(m.role==='assistant'?' ai':'');av.textContent=m.role==='assistant'?'X':'أنت';const body=document.createElement('div');body.className='body';const who=document.createElement('div');who.className='who';who.textContent=m.role==='assistant'?'XENAI':'أنت';const text=document.createElement('div');text.className='content';text.textContent=m.content||'';body.append(who,text);if(m.image){const img=document.createElement('img');img.className='sent-image';img.src=m.image;img.alt='الصورة المرسلة';body.append(img)}if(m.role==='assistant'){const speak=document.createElement('button');speak.className='speak';speak.textContent='◖ قراءة الرد';speak.onclick=()=>{if(!('speechSynthesis'in window))return toast('القراءة الصوتية غير مدعومة في متصفحك.');speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(m.content);u.lang='ar-SA';speechSynthesis.speak(u)};body.append(speak)}row.append(av,body);box.append(row)});$('#chat').scrollTop=$('#chat').scrollHeight;
+      }
+      function add(role,content,img=null){if(!current()){const c={id:crypto.randomUUID(),title:(content||'صورة جديدة').slice(0,34),messages:[]};chats.unshift(c);active=c.id}const c=current();c.messages.push({role,content,...(img?{image:img}:{})});if(c.messages.length===1&&content)c.title=content.slice(0,34);save();render()}
+      async function send(text){if(busy||(!text.trim()&&!image))return;const img=image;add('user',text.trim(),img);image=null;$('#preview').hidden=true;$('#imageInput').value='';$('#input').value='';busy=true;try{const messages=current().messages.map(({role,content})=>({role,content}));const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages,...(img?{image:img}:{})})});const data=await r.json();if(!r.ok)throw Error(data.error||'تعذر الحصول على رد.');add('assistant',data.reply)}catch(e){toast(e.message||'تعذر الاتصال بمحرك XENAI.')}finally{busy=false}}
+      $('#newChat').onclick=()=>{active=null;image=null;$('#preview').hidden=true;$('#input').value='';render();$('#input').focus()};$('#form').onsubmit=e=>{e.preventDefault();send($('#input').value)};$('#input').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('#form').requestSubmit()}};$('#input').oninput=e=>{e.target.style.height='auto';e.target.style.height=Math.min(e.target.scrollHeight,130)+'px'};
+      $('#clear').onclick=()=>{if(chats.length&&confirm('هل تريد حذف جميع المحادثات؟')){chats=[];active=null;save();render()}};$('#imageButton').onclick=()=>$('#imageInput').click();$('#imageInput').onchange=e=>{const f=e.target.files?.[0];if(!f)return;if(f.size>7*1024*1024){toast('حجم الصورة يتجاوز 7 ميغابايت.');e.target.value='';return}const reader=new FileReader();reader.onload=()=>{image=reader.result;$('#previewImg').src=image;$('#fileName').textContent=f.name;$('#preview').hidden=false};reader.readAsDataURL(f)};$('#removeImage').onclick=()=>{image=null;$('#imageInput').value='';$('#preview').hidden=true};
+      $('#stickerButton').onclick=()=>$('#stickers').hidden=!$('#stickers').hidden;$('#stickers').onclick=e=>{if(e.target.tagName==='BUTTON'){$('#input').value+e.target.textContent;$('#input').value+='' /* keep sticker insertion below */;$('#input').setRangeText(e.target.textContent,$('#input').selectionStart,$('#input').selectionEnd,'end');$('#input').focus();$('#stickers').hidden=true}};
+      $('#mic').onclick=()=>{const R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R)return toast('الإملاء الصوتي غير مدعوم؛ جرّب Chrome أو Edge.');const rec=new R();rec.lang='ar-SA';rec.onresult=e=>{$('#input').value+=e.results[0][0].transcript};rec.onerror=()=>toast('تحقق من إذن الميكروفون.');rec.start()};$('#theme').onclick=()=>{document.body.classList.toggle('light');localStorage.setItem('xenai-theme',document.body.classList.contains('light')?'light':'dark')};$('#menu').onclick=()=>$('#sidebar').classList.toggle('open');document.querySelectorAll('[data-prompt]').forEach(b=>b.onclick=()=>send(b.dataset.prompt));if(localStorage.getItem('xenai-theme')==='light')document.body.classList.add('light');render();fetch('/api/health').then(r=>r.json()).then(d=>$('#status').textContent=d.ready?'● المحرك متصل وجاهز':'● أضف مفتاح المزود إلى .env').catch(()=>$('#status').textContent='● المحرك غير متاح');
+    })();
+  </script>
 </body>
 </html>
